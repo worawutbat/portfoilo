@@ -1,4 +1,5 @@
-import '../styles/globals.css';
+/* eslint-disable react/jsx-props-no-spreading */
+import '../styles/css/globals.scss';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import type { AppProps } from 'next/app';
 
