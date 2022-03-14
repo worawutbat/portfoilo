@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import styles from '../styles/Home.module.css';
+import styles from './Home.module.css';
 
 const Home = () => {
   return (
@@ -9,6 +9,8 @@ const Home = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <div className="m-8 bg-[red]">test</div>
 
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.tsx</code>
