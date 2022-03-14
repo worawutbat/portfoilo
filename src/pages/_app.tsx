@@ -16,20 +16,22 @@ function MyApp({ Component, pageProps }: AppProps) {
   // eslint-disable-next-line react/jsx-props-no-spreading
   return (
     <ContextProvider>
-      <main className="container m-auto relative">
-        <div className="relative h-[100vh]">
-          <aside className="absolute left-0">
+      <>
+        <div className="relative container m-auto">
+          <aside className="sticky bottom-0 left-0 top-0 w-[fit-content] z-10">
             <SideBar />
           </aside>
-          <section className="pl-[128px] py-48">
-            <Component {...pageProps} />
-          </section>
+          <main style={{ marginTop: '-100vh' }}>
+            <section className="pl-[180px] pr-24 py-[128px]">
+              <Component {...pageProps} />
+            </section>
+          </main>
+          <footer className="sticky bottom-0 left-0 right-0">
+            <Footer />
+          </footer>
         </div>
-        <footer className="absolute bottom-0 left-0 right-0">
-          <Footer />
-        </footer>
         <ColorSchemeCSSVariable />
-      </main>
+      </>
     </ContextProvider>
   );
 }

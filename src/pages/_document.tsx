@@ -23,11 +23,7 @@ export default class MyDocument extends Document {
 
           {/* default meta share */}
           {/* Meta share */}
-          <meta
-            key="keyword"
-            name="keyword"
-            content="นิยาย,นิยายออนไลน,อ่านนิยาย,เขียนนิยาย,pintobook,fictionlog,storylog,ฟิก,นิยายแฟนตาซี,นิยายรัก,นิยายวาย,นิยายดราม่า,นิยายแปล,ถูกลิขสิทธิ์"
-          />
+          <meta key="keyword" name="keyword" content="วรวุฒิ ฐิติธรรมจริยา" />
           <meta key="og:site_name" property="og:site_name" content="Pintobook" />
           <meta key="cache-control" httpEquiv="cache-control" content="max-age=43200" />
           <meta key="og:image:width" property="og:image:width" content="1200" />

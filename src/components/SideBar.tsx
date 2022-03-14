@@ -44,7 +44,7 @@ function SideBar() {
   }, [theme]);
 
   return (
-    <div className="px-16 py-12 bg-componentsBgBase h-[100vh] py-48 flex flex-col items-center border-r border-r-colorsBlack02Label">
+    <div className="px-16 py-12 bg-componentsBgBase w-[120px] h-[100vh] py-48 flex flex-col items-center border-r border-r-colorsBlack02Label">
       <div style={{ width: 40 }}>
         <Image src="/favicon/android-chrome-192x192.png" layout="responsive" width={30} height={30} alt="Picture of the author" />
       </div>
