@@ -1,9 +1,15 @@
+/* eslint-disable react/no-unused-prop-types */
 // this is component to set css valiable
+
+import { useContext } from 'react';
 
 import colorScheme from '../colorScheme';
 
+import { ThemeContext } from '~/store/themeProvider';
+
 const day = `
   ${colorScheme.colorsRed01}: #B00020;
+  ${colorScheme.colorsRed02}: #B02600;
 
   ${colorScheme.colorsBlack01Label}: #2A2C2E;
   ${colorScheme.colorsBlack02Label}: #343739;
@@ -19,7 +25,6 @@ const day = `
   ${colorScheme.colorsBlue07}: #effcff;
 
   ${colorScheme.colorsWhite}: #ffffff;
-
 
   ${colorScheme.componentsBgBase}: #fffffe;
   ${colorScheme.componentsBgGrouped01}: #fffffd;
@@ -37,6 +42,7 @@ const day = `
 
 const night = `
   ${colorScheme.colorsRed01}: #CF6679;
+  ${colorScheme.colorsRed02}: #CF666F;
 
   ${colorScheme.colorsBlack01Label}: #fdfdfd;
   ${colorScheme.colorsBlack02Label}: #adadad;
@@ -68,11 +74,10 @@ const night = `
 `;
 
 export interface IPropsColorSchemeCSSVariable {
-  theme: 'DAY' | 'NIGHT';
+  theme: 'DAY' | 'NIGHT' | string;
 }
 
-const getTheme = (props: IPropsColorSchemeCSSVariable) => {
-  const { theme } = props;
+const getTheme = (theme: 'DAY' | 'NIGHT' | string) => {
   switch (theme) {
     case 'DAY':
       return day;
@@ -83,8 +88,9 @@ const getTheme = (props: IPropsColorSchemeCSSVariable) => {
   }
 };
 
-const ColorSchemeCSSVariable = (props: IPropsColorSchemeCSSVariable) => {
-  const currentTheme = getTheme(props);
+function ColorSchemeCSSVariable() {
+  const { theme } = useContext(ThemeContext);
+  const currentTheme = getTheme(theme);
   return (
     <style
       // eslint-disable-next-line react/no-danger
@@ -97,6 +103,6 @@ const ColorSchemeCSSVariable = (props: IPropsColorSchemeCSSVariable) => {
       }}
     />
   );
-};
+}
 
 export default ColorSchemeCSSVariable;

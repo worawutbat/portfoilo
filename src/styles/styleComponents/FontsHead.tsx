@@ -27,7 +27,7 @@ const preloadFonts = [
   '/a/fonts/BBB_thin.ttf',
 ];
 
-const FontsHead = () => {
+function FontsHead() {
   return (
     <Head>
       {preloadFonts.map((font) => (
@@ -35,6 +35,6 @@ const FontsHead = () => {
       ))}
     </Head>
   );
-};
+}
 
 export default FontsHead;
