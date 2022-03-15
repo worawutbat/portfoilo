@@ -5,7 +5,7 @@ const initialState = {
 };
 
 interface IStateThemeReducer {
-  theme: 'DAY' | 'NIGHT';
+  theme: string;
 }
 
 export const ThemeContext = createContext<IStateThemeReducer & { dayThemeMode?: () => void; nightThemeMode?: () => void }>({ theme: 'DAY' });

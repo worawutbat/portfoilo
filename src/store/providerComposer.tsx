@@ -1,4 +1,4 @@
-import { cloneElement, ReactChild, ReactChildren, ReactNode } from 'react';
+import { cloneElement, ReactChild, ReactChildren } from 'react';
 
 import ThemeProvider from './themeProvider';
 
