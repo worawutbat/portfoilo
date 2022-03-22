@@ -1,0 +1,23 @@
+@font-face {
+    font-family: Patrician;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/Patrician.ttf");
+  }
+  
+  @font-face {
+    font-family: Chapaza;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/Chapaza.ttf");
+  }
+
+  @font-face {
+    font-family: Plant;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/Plant.ttf");
+  }

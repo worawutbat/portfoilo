@@ -59,9 +59,10 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      mnl: ['MNLanna', 'Helvetica', 'arial', 'sans-serif'],
-      opn: ['Opun', 'Helvetica', 'arial', 'sans-serif'],
-      body: ['Opun', 'Helvetica', 'arial', 'sans-serif'],
+      pat: ['Patrician', 'Helvetica', 'arial', 'sans-serif'],
+      chz: ['Chapaza', 'Helvetica', 'arial', 'sans-serif'],
+      plt: ['Plant', 'Helvetica', 'arial', 'sans-serif'],
+      body: ['Chapaza', 'Helvetica', 'arial', 'sans-serif'],
     },
     screens: {
       sm: '576px',

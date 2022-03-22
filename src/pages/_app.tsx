@@ -7,8 +7,10 @@ import Footer from '~/components/Footer';
 import SideBar from '~/components/SideBar';
 import ContextProvider from '~/store/providerComposer';
 import ColorSchemeCSSVariable from '~/styles/styleComponents/ColorSchemeCSSVariable';
-
 import '@fortawesome/fontawesome-svg-core/styles.css'; // import Font Awesome CSS
+import FontsHead from '~/styles/styleComponents/FontsHead';
+
+import '../styles/css/fonts.css';
 
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
@@ -17,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ContextProvider>
       <>
+        <FontsHead />
         <div className="relative container m-auto">
           <aside className="sticky bottom-0 left-0 top-0 w-[fit-content] z-10">
             <SideBar />
