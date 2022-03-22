@@ -17,8 +17,10 @@ import {
   //   faPhone,
   //   faGraduationCap,
   //   faLaptopCode,
+  faGamepad,
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useCallback, useContext, useMemo } from 'react';
 
 import Button from './Button';
@@ -64,6 +66,11 @@ function SideBar() {
         >
           <Icon icon={isDayTheme ? faSun : faMoon} size="2x" />
         </Button>
+        <Link href="/game" passHref>
+          <Button>
+            <Icon icon={faGamepad} size="2x" />
+          </Button>
+        </Link>
       </div>
       <div />
     </div>
