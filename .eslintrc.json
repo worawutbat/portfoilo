@@ -45,7 +45,6 @@
     "linebreak-style": 0,
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-non-null-assertion": 2,
-    "react/function-component-definition": 0,
     "react/jsx-filename-extension": [
       0,
       {
@@ -114,13 +113,18 @@
   },
   "overrides": [
     {
-      "files": ["*.spec.*", "*.stories.*"], // Or *.test.js
+      "files": [
+        "*.spec.*",
+        "*.stories.*"
+      ], // Or *.test.js
       "rules": {
         "react/jsx-props-no-spreading": "off"
       }
     },
     {
-      "files": ["*/utils/*"],
+      "files": [
+        "*/utils/*"
+      ],
       "rules": {
         "no-restricted-imports": "off"
       }

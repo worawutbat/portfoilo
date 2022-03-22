@@ -1,54 +1,56 @@
-import Image from 'next/image';
-
-import styles from './Home.module.css';
-
-const Home = () => {
+function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+    <div className="bg-componentsBgBase text-colorsBlack01Label overflow-x-scroll">
+      <h1 className="text-24">Name: Worawut Tititumjariya</h1>
 
-        <div className="m-8 bg-[red]">test</div>
+      <h2 className="text-22">contact:</h2>
 
-        <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.tsx</code>
-        </p>
+      <h2>
+        tel: <span>080-434-7241</span>
+      </h2>
+      <h2>e-mail: woravootbat@gmail.com</h2>
+      <h2>
+        github:
+        <span>
+          <a href="https://github.com/worawutbat"> worawutbat</a>
+        </span>
+      </h2>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+      <h2>Work Experience</h2>
+      <div>Frontend Software Engineer (Web Application)</div>
+      <div>Fictionlog.co | Apl 2019 - now</div>
+      <div>- created an application features for books and ebooks Fictionlog&apos;s platform</div>
+      <div>- used stack and technologies by NextJS, TypeScript, React, React Hook, GraphQL, Tailwindcss, Scss, Styled component, Vercel, Github</div>
+      <div>- created documents source code such as storybook</div>
+      <div>- utilized Aglie methodolgy and click up as a tools for manage work tasking</div>
+      <div>- used Github and versel as a platform to conduct source code versioning, CI/CD, code review</div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+      <div>Frontend Developer</div>
+      <div>Venuee.co |Apl 2018 to Apl 2019</div>
+      <div>- created an application features for event places in Venuee&apos;s platform</div>
+      <div>- used stack and technologies by NextJS, TypeScript, React, GraphQL, Styled component, Scss, Github, Jest, Docker</div>
+      <div>- unit test, E2E test</div>
+      <div>- utilized Aglie methodolgy and asana as a tools for manage work tasking</div>
+      <div>- used Github as a platform to conduct source code versioning, CI/CD, code review</div>
 
-          <a href="https://github.com/vercel/next.js/tree/canary/examples" className={styles.card}>
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+      <div>Cooperative Education (Internship)</div>
+      <div>NodeFrame Solution | Aug 2017 to Dec 2017</div>
+      <div>- created an application features for HR platform</div>
+      <div>- used stack and technologies by React, TypeScript, GraphQL, Styled component, Github, Jest, Docker, Jira, Scss, MongoDB, Express, NodeJS, ReactJS, MERN stack</div>
 
-          <a href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" className={styles.card}>
-            <h2>Deploy &rarr;</h2>
-            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
+      <div>Skills & Interests</div>
+      <div>Programming: </div>
+      <div>Typescript, Javascript</div>
+      <div>Technologies: Git, React, React Hook, NextJS, CSS</div>
 
-      <footer className={styles.footer}>
-        <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <h3>Education</h3>
+      <div>Kasetsart University</div>
+      <div>Bachelor of Computer Science</div>
+      <div>G.P.A 3.27/4.00 (Second Class Honours)</div>
+
+      {/* <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} /> */}
     </div>
   );
-};
+}
 
 export default Home;
