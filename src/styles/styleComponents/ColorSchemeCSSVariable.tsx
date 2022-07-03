@@ -77,7 +77,7 @@ export interface IPropsColorSchemeCSSVariable {
   theme: 'DAY' | 'NIGHT' | string;
 }
 
-const getTheme = (theme: 'DAY' | 'NIGHT' | string) => {
+const getTheme = ({ theme }: IPropsColorSchemeCSSVariable) => {
   switch (theme) {
     case 'DAY':
       return day;
@@ -88,8 +88,8 @@ const getTheme = (theme: 'DAY' | 'NIGHT' | string) => {
   }
 };
 
-function ColorSchemeCSSVariable() {
-  const { theme } = useContext(ThemeContext);
+function ColorSchemeCSSVariable(theme: IPropsColorSchemeCSSVariable) {
+  // const { theme } = useContext(ThemeContext);
   const currentTheme = getTheme(theme);
   return (
     <style
