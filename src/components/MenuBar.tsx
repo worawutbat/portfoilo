@@ -17,7 +17,7 @@ import {
   //   faPhone,
   //   faGraduationCap,
   //   faLaptopCode,
-  faGamepad,
+  //   faGamepad,
 } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import Link from 'next/link';

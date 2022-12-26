@@ -61,29 +61,38 @@ function Game() {
   }, []);
 
   // For controlled component
-  const adjustXPos = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const { x, y } = controlledPosition;
-    setControlledPosition({ x: x - 10, y });
-  }, []);
+  const adjustXPos = useCallback(
+    (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const { x, y } = controlledPosition;
+      setControlledPosition({ x: x - 10, y });
+    },
+    [controlledPosition],
+  );
 
-  const adjustYPos = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const { x, y } = controlledPosition;
-    setControlledPosition({ x, y: y - 10 });
-  }, []);
+  const adjustYPos = useCallback(
+    (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const { x, y } = controlledPosition;
+      setControlledPosition({ x, y: y - 10 });
+    },
+    [controlledPosition],
+  );
 
-  const onControlledDrag = useCallback((e, position) => {
+  const onControlledDrag = useCallback((_e, position) => {
     const { x, y } = position;
     setControlledPosition({ x, y });
   }, []);
 
-  const onControlledDragStop = useCallback((e, position) => {
-    onControlledDrag(e, position);
-    onStop();
-  }, []);
+  const onControlledDragStop = useCallback(
+    (e, position) => {
+      onControlledDrag(e, position);
+      onStop();
+    },
+    [onControlledDrag, onStop],
+  );
 
   const dragHandlers = { onStart, onStop };
   return (

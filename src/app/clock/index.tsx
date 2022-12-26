@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
-import { CSSProperties } from 'react';
+// import { CSSProperties } from 'react';
 
 import css from './clock.module.scss';
 
@@ -17,8 +17,8 @@ interface IPropsClock {
 function Clock(props: IPropsClock) {
   const { theme, onChangeTheme } = props;
   return (
-    <div className="flex justify-center items-center bg-slate-500 h-full">
-      <div className="flex justify-center items-center">
+    <div className="flex items-center justify-center h-full bg-slate-500">
+      <div className="flex items-center justify-center">
         <Icon icon={faSun} size="1x" />
         <button type="button" className={classNames('px-8 py-12 border border-cyan-50 rounded-full  before:content-[test]', css.toggleButton)} />
         <Icon icon={faMoon} size="1x" />

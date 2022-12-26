@@ -1,11 +1,10 @@
 /* eslint-disable react/no-unused-prop-types */
 // this is component to set css valiable
 
-import { useContext } from 'react';
+// import { useContext } from 'react';
+// import { ThemeContext } from '~/store/themeProvider';
 
 import colorScheme from '../colorScheme';
-
-import { ThemeContext } from '~/store/themeProvider';
 
 const day = `
   ${colorScheme.colorsRed01}: #B00020;
