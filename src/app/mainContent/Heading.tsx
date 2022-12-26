@@ -1,37 +1,23 @@
 import classNames from 'classnames';
-import { CSSProperties, useEffect, useState } from 'react';
 
 import css from './Heading.module.scss';
 
-function Heading() {
-  const [isReverse, setIsReverse] = useState('normal');
-  const [isPause, setIsPause] = useState(false);
+interface IPropsTyping {
+  content?: string;
+}
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsReverse(isReverse === 'normal' ? 'reverse' : 'normal');
-      setIsPause(!isPause);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [isPause, isReverse]);
+const defaultProps = {
+  content: "Hi, I'm Web Developer",
+};
 
+function Heading({ content }: IPropsTyping) {
   return (
-    <div className="bg-black">
-      <div className="text-white">{isReverse}</div>
+    <div className="p-16 bg-black rounded-8">
       <div className="w-[fit-content] text-white">
-        <span> Hi, I'm</span>
-        {isReverse === 'normal' ? (
-          <h1 className={classNames(css.typing)} style={{ '--isReverse': 'reverse', '--test': 1 } as CSSProperties}>
-            Worawut
-          </h1>
-        ) : (
-          <h1 className={classNames(css.typingReverse)} style={{ '--isReverse': 'normal', '--test': 1 } as CSSProperties}>
-            Worawut
-          </h1>
-        )}
+        <h1 className={classNames(css.typing, 'text-24')}>{content}</h1>
       </div>
     </div>
   );
 }
-
+Heading.defaultProps = defaultProps;
 export default Heading;

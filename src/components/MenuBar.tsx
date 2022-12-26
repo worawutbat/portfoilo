@@ -34,10 +34,14 @@ function MenuBar(props: IPropsMenuBar) {
 
   return (
     <div className="px-16 bg-componentsBgGrouped01 w-[120px] h-[100vh] py-48 flex flex-col items-center border-r border-r-colorsBlack02Label">
-      <div style={{ width: 40 }}>
-        <Image src="/favicon/android-chrome-192x192.png" layout="responsive" width={30} height={30} alt="Picture of the author" />
-      </div>
-      <div className="flex flex-col space-y-12 py-32">
+      <Link href="/">
+        <Button className="border-none">
+          <div style={{ width: 40 }}>
+            <Image src="/favicon/android-chrome-192x192.png" layout="responsive" width={30} height={30} alt="Picture of the author" />
+          </div>
+        </Button>
+      </Link>
+      <div className="flex flex-col py-32 space-y-12">
         <Button onClick={() => onChangeTheme(theme === 'DAY' ? 'NIGHT' : 'DAY')}>
           <Icon icon={theme === 'DAY' ? faSun : faMoon} size="2x" />
         </Button>
