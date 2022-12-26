@@ -2,9 +2,11 @@
 import '../styles/css/globals.scss';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 import Footer from '~/components/Footer';
-import SideBar from '~/components/SideBar';
+import MenuBar from '~/components/MenuBar';
 import ContextProvider from '~/store/providerComposer';
 import ColorSchemeCSSVariable from '~/styles/styleComponents/ColorSchemeCSSVariable';
 import '@fortawesome/fontawesome-svg-core/styles.css'; // import Font Awesome CSS
@@ -16,24 +18,35 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 
 function MyApp({ Component, pageProps }: AppProps) {
   // eslint-disable-next-line react/jsx-props-no-spreading
+  const [theme, setTheme] = useState<'DAY' | 'NIGHT'>('DAY');
+  const { pathname } = useRouter();
+
   return (
     <ContextProvider>
       <>
         <FontsHead />
-        <div className="relative container m-auto">
-          <aside className="sticky bottom-0 left-0 top-0 w-[fit-content] z-10">
-            <SideBar />
-          </aside>
-          <main style={{ marginTop: '-100vh' }}>
-            <section className="pl-[180px] pr-24 py-[128px]">
-              <Component {...pageProps} />
-            </section>
-          </main>
-          <footer className="sticky bottom-0 left-0 right-0">
-            <Footer />
-          </footer>
-        </div>
-        <ColorSchemeCSSVariable />
+        {pathname === '/clock' && (
+          <div className="container m-auto bg-componentsBgGrouped01 h-[100vh]">
+            <Component {...pageProps} theme={theme} onChangeTheme={setTheme} />
+          </div>
+        )}
+        {pathname !== '/clock' && (
+          <div className="container relative m-auto bg-componentsBgGrouped01">
+            <aside className="sticky bottom-0 left-0 top-0 w-[fit-content] z-10">
+              <MenuBar theme={theme} onChangeTheme={setTheme} />
+            </aside>
+
+            <main style={{ marginTop: '-100vh' }}>
+              <section className="pl-[180px] pr-24 py-[128px]">
+                <Component {...pageProps} />
+              </section>
+            </main>
+            <footer className="sticky bottom-0 left-0 right-0 z-10">
+              <Footer />
+            </footer>
+          </div>
+        )}
+        <ColorSchemeCSSVariable theme={theme} />
       </>
     </ContextProvider>
   );
