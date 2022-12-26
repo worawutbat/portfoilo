@@ -41,8 +41,8 @@ function AboutMe() {
   return (
     <div>
       <h3>
-        My name is <b className="text-20">Worawut Tititumjariya</b>. I'm graduated from computer science major, Kasetsart University.I am Web Developer with 3+ years of hands-on
-        experience in developing website with reactjs, nextjs and css framwork such as bootstrap, style-component and tailwindcss.
+        My name is <b className="text-20">Worawut Tititumjariya</b>. I&lsquo;m graduated from computer science major, Kasetsart University.I am Web Developer with 3+ years of
+        hands-on experience in developing website with reactjs, nextjs and css framwork such as bootstrap, style-component and tailwindcss.
       </h3>
     </div>
   );
