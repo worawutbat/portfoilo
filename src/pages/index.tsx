@@ -1,7 +1,15 @@
+import Heading from '~/app/mainContent/Heading';
+
+/* eslint-disable jsx-a11y/anchor-is-valid */
 function Home() {
   return (
     <div className="bg-componentsBgBase text-colorsBlack01Label overflow-x-scroll">
-      <h1 className="text-24">Name: Worawut Tititumjariya</h1>
+      <Heading />
+
+      <h1 className="text-24">Hi, I'm Worawut web Developer</h1>
+      <div>Frontend Developer</div>
+
+      <button type="button">Contact me!</button>
 
       <h2 className="text-22">contact:</h2>
 
