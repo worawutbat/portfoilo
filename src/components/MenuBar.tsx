@@ -45,11 +45,11 @@ function MenuBar(props: IPropsMenuBar) {
         <Button onClick={() => onChangeTheme(theme === 'DAY' ? 'NIGHT' : 'DAY')}>
           <Icon icon={theme === 'DAY' ? faSun : faMoon} size="2x" />
         </Button>
-        <Link href="/game" passHref>
+        {/* <Link href="/game" passHref>
           <Button>
             <Icon icon={faGamepad} size="2x" />
           </Button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

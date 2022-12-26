@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           </div>
         )}
         {pathname !== '/clock' && (
-          <div className="relative container m-auto bg-componentsBgGrouped01">
+          <div className="container relative m-auto bg-componentsBgGrouped01">
             <aside className="sticky bottom-0 left-0 top-0 w-[fit-content] z-10">
               <MenuBar theme={theme} onChangeTheme={setTheme} />
             </aside>
@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <Component {...pageProps} />
               </section>
             </main>
-            <footer className="sticky bottom-0 left-0 right-0">
+            <footer className="sticky bottom-0 left-0 right-0 z-10">
               <Footer />
             </footer>
           </div>

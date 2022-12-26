@@ -51,7 +51,7 @@ function AboutMe() {
 function WorkExperience() {
   return (
     <div>
-      <div>Work Experience</div>
+      <h3 className="text-20">Work Experience</h3>
       <div className="space-y-8">
         {WorkExperienceObj.map((expItem) => (
           <div>
@@ -71,31 +71,16 @@ function WorkExperience() {
   );
 }
 
-function Contact() {
-  return (
-    <div>
-      <h2 className="text-22">contact:</h2>
-      <h2>
-        tel: <span>080-434-7241</span>
-      </h2>
-      <h2>e-mail: woravootbat@gmail.com</h2>
-      <h2>
-        github:
-        <span>
-          <a href="https://github.com/worawutbat"> worawutbat</a>
-        </span>
-      </h2>
-    </div>
-  );
-}
-
 function Skill() {
   return (
     <div>
       <div>Skills & Interests</div>
       <div>Programming: </div>
       <div>Typescript, Javascript</div>
-      <div>Technologies: Git, React, React Hook, NextJS, CSS</div>
+      <div>
+        Technologies: Git, React, React Hook, Vercel, NextJS, GraphQL, Storybook, TailwindCss, Bootstrap, Styled-Component, Jest, Docker, Jira, Scss, MongoDB, Express, NodeJS, MERN
+        stack
+      </div>
     </div>
   );
 }
@@ -123,8 +108,6 @@ function Home() {
       </div>
 
       <Heading />
-
-      <Contact />
 
       <WorkExperience />
 
